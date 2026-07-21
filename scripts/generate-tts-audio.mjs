@@ -51,7 +51,7 @@ if (!BAIDU_API_KEY || !BAIDU_SECRET) {
   console.error('错误: 缺少百度 API 凭证。请通过 --baidu-key/--baidu-secret 参数或环境变量 BAIDU_API_KEY/BAIDU_SECRET 传入。');
   process.exit(1);
 }
-const VOICE_ID = values['per'] || '114086';
+const VOICE_ID = values['per'] || process.env.VOICE_ID || '114086';
 const SILENT_BETWEEN = parseFloat(values['silent-between'] || '0.5');
 const outputPath = values['output'] || join(dirname(scriptPath), 'audio.mp3');
 

@@ -217,7 +217,7 @@ projects/{projectName}/
      --min-scene-duration 6 ^
      --max-silence 2
    ```
-   自动按场景逐段生成音频，短场景补静音保证动画执行时间。输出 `audio.mp3` + `audio.srt` + `scene-timing.json`。音色为百度克隆音色（ID: 114086，可用 `--per` 覆盖）。
+   自动按场景逐段生成音频，短场景补静音保证动画执行时间。输出 `audio.mp3` + `audio.srt` + `scene-timing.json`。音色读取自 `.env.local` 的 `VOICE_ID`（缺省 114086，可用 `--per` 覆盖）。
 
    > **核心原则**：动画视觉品质优先。静音填充是为了给动画留够执行时间，文案为动画服务。允许更多静音填充（`--max-silence` 调大），最长不超过 5-6s。
 

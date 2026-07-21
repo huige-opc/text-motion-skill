@@ -66,6 +66,9 @@ notepad .env.local
 BAIDU_API_KEY=your_baidu_api_key_here
 BAIDU_SECRET=your_baidu_secret_here
 
+# 百度克隆音色 ID（可选，缺省 114086）
+VOICE_ID=114086
+
 # pixazo VoxCPM（可选，用于 test-tts.mjs）
 VOXCPM_API_KEY=your_voxcpm_key_here
 ```
