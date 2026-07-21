@@ -149,6 +149,17 @@ node scripts/render-mp4-pipe.mjs "<projectRoot>"
 
 ---
 
-## 📄 License
+## � 联系
+
+有任何问题或建议，欢迎联系：
+
+- 微信：HgAiAgent（扫码添加，拉你进交流群）
+- 邮箱：[szlihui801@gmail.com](mailto:szlihui801@gmail.com)
+
+<img src="docs/wechat.png" width="200" alt="微信：HgAiAgent">
+
+---
+
+## �📄 License
 
 MIT
