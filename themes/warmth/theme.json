@@ -1,0 +1,17 @@
+{
+  "id": "warmth",
+  "nameZh": "温暖 Warmth",
+  "nameEn": "Warmth",
+  "mood": "温馨、亲切、情感关怀",
+  "keywords": ["爱", "关怀", "家人", "温馨", "情感", "回忆"],
+  "colors": {
+    "primary": "#fb923c",
+    "secondary": "#f472b6",
+    "accent": "#fcd34d",
+    "background": "#1a0a05",
+    "backgroundGradient": "linear-gradient(180deg, #1a0a05 0%, #2a1510 100%)",
+    "text": "#fff8f0",
+    "textMuted": "rgba(255,248,240,0.85)"
+  },
+  "background": "05-warmth-v2.png"
+}

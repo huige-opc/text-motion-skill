@@ -1,0 +1,17 @@
+{
+  "id": "claude-cream",
+  "nameZh": "Claude 奶油",
+  "nameEn": "Claude Cream",
+  "mood": "温暖、亲和、干净、工具感",
+  "keywords": ["奶油", "淡暖米", "陶土橙", "温暖", "干净", "工具", "分享", "知识"],
+  "colors": {
+    "primary": "#C15F3C",
+    "secondary": "#E8A96A",
+    "accent": "#8B6E48",
+    "background": "#FAF9F5",
+    "backgroundGradient": "none",
+    "text": "#1F1E1D",
+    "textMuted": "#6B6862"
+  },
+  "background": ""
+}

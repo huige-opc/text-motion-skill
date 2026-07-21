@@ -1,0 +1,118 @@
+/* Claude Cream Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #C15F3C;
+  --hf-secondary: #E8A96A;
+  --hf-accent: #8B6E48;
+  --hf-bg: #FAF9F5;
+  --hf-bg-gradient: none;
+  --hf-text: #1F1E1D;
+  --hf-text-muted: #6B6862;
+
+  /* Text Colors */
+  --hf-title-color: #1F1E1D;
+  --hf-subtitle-color: #6B6862;
+  --hf-highlight: #C15F3C;
+
+  /* Background */
+  --hf-overlay-gradient: none;
+
+  /* Fonts */
+  --hf-font-display: 'PingFang SC', 'HarmonyOS Sans SC', 'Inter', system-ui, sans-serif;
+  --hf-font-body: 'PingFang SC', 'HarmonyOS Sans SC', 'Inter', system-ui, sans-serif;
+  --hf-font-mono: 'JetBrains Mono', 'SF Mono', 'IBM Plex Mono', monospace;
+
+  /* Font Sizes */
+  --hf-size-title: 96px;
+  --hf-size-subtitle: 32px;
+  --hf-size-body: 28px;
+  --hf-size-caption: 18px;
+
+  /* Font Weights */
+  --hf-weight-bold: 800;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 8px;
+  --hf-radius-md: 14px;
+  --hf-radius-lg: 20px;
+  --hf-radius-xl: 999px;
+
+  /* Shadows */
+  --hf-shadow-soft: 0 8px 24px rgba(60, 45, 25, 0.06);
+  --hf-shadow-text: none;
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.25s;
+  --hf-duration-normal: 0.5s;
+  --hf-duration-slow: 0.8s;
+
+  --hf-text-glow: none;
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Claude Cream: 温暖网格底纹 */
+.hf-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ECE4D3 1px, transparent 1px),
+    linear-gradient(90deg, #ECE4D3 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Claude Cream: 卡片风格 */
+.hf-card {
+  background: #FFFFFF;
+  border-radius: var(--hf-radius-lg);
+  box-shadow: var(--hf-shadow-soft);
+}
+
+/* Claude Cream: macOS 风格窗口 */
+.hf-mac-window {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 20px 48px rgba(60, 45, 25, 0.10);
+  overflow: hidden;
+}
+.hf-mac-window .hf-titlebar {
+  height: 42px;
+  background: #F5F0E6;
+  border-bottom: 1px solid #ECE4D3;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}

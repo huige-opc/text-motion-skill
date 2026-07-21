@@ -1,0 +1,49 @@
+{
+  "id": "news-briefing",
+  "nameZh": "新闻快讯",
+  "nameEn": "News Briefing",
+  "mood": "信息条、日期、事实卡、播报感",
+  "keywords": [
+    "新闻",
+    "快讯",
+    "盘点",
+    "大事件",
+    "更新",
+    "版本",
+    "发布",
+    "资讯"
+  ],
+  "colors": {
+    "primary": "#60a5fa",
+    "secondary": "#ef4444",
+    "accent": "#f8fafc",
+    "background": "#061b36",
+    "backgroundGradient": "linear-gradient(180deg, #061b36 0%, #0b2a4f 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.82)"
+  },
+  "background": "23-news-briefing.png",
+  "motion": {
+    "entrance": "side-reveal",
+    "emphasis": "accent-line",
+    "ambient": "info-bar-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

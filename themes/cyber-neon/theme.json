@@ -1,0 +1,47 @@
+{
+  "id": "cyber-neon",
+  "nameZh": "赛博霓虹",
+  "nameEn": "Cyber Neon",
+  "mood": "黑紫底、青粉霓虹、小面积高亮",
+  "keywords": [
+    "赛博",
+    "霓虹",
+    "未来感",
+    "酷炫科技",
+    "年轻化科技",
+    "元宇宙"
+  ],
+  "colors": {
+    "primary": "#00e5ff",
+    "secondary": "#ff2bd6",
+    "accent": "#7c3aed",
+    "background": "#080717",
+    "backgroundGradient": "linear-gradient(180deg, #080717 0%, #16072a 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.84)"
+  },
+  "background": "09-cyber-neon.png",
+  "motion": {
+    "entrance": "precision-rise",
+    "emphasis": "accent-line",
+    "ambient": "neon-line-drift",
+    "easing": "ease-out-expo",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

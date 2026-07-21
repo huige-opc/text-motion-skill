@@ -1,0 +1,104 @@
+/* Business Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #f4d03f;
+  --hf-secondary: #60a5fa;
+  --hf-accent: #ffffff;
+  --hf-bg: #0f172a;
+  --hf-bg-gradient: linear-gradient(180deg, #0f172a 0%, #1a2744 100%);
+  --hf-text: #ffffff;
+  --hf-text-muted: rgba(255, 255, 255, 0.85);
+
+  /* Text Colors */
+  --hf-title-color: #ffffff;
+  --hf-subtitle-color: rgba(255, 255, 255, 0.85);
+  --hf-highlight: #f4d03f;
+
+  /* Background */
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(15, 25, 50, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  /* Fonts */
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-mono: 'IBM Plex Mono', monospace;
+
+  /* Font Sizes */
+  --hf-size-title: 72px;
+  --hf-size-subtitle: 32px;
+  --hf-size-body: 24px;
+  --hf-size-caption: 18px;
+
+  /* Font Weights */
+  --hf-weight-bold: 700;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 4px;
+  --hf-radius-md: 8px;
+  --hf-radius-lg: 16px;
+  --hf-radius-xl: 24px;
+
+  /* Shadows */
+  --hf-shadow-card: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --hf-shadow-text: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.2s;
+  --hf-duration-normal: 0.4s;
+  --hf-duration-slow: 0.8s;
+
+  --hf-text-glow: none;
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-shadow: var(--hf-shadow-text);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Business-specific: solid content panel */
+.hf-content-panel {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: var(--hf-radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--hf-shadow-card);
+}
+
+/* Business-specific: Gold Accent */
+.hf-gold-accent {
+  color: var(--hf-primary);
+  text-shadow: none;
+}
+
+.hf-gold-border {
+  border-color: var(--hf-primary);
+  box-shadow: none;
+}

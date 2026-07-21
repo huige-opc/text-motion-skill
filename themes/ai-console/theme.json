@@ -1,0 +1,49 @@
+{
+  "id": "ai-console",
+  "nameZh": "AI 控制台",
+  "nameEn": "AI Console",
+  "mood": "终端、任务队列、模型状态、代码面板",
+  "keywords": [
+    "Agent",
+    "Codex",
+    "Claude Code",
+    "终端",
+    "自动执行",
+    "任务队列",
+    "代码执行",
+    "工作流"
+  ],
+  "colors": {
+    "primary": "#5eead4",
+    "secondary": "#60a5fa",
+    "accent": "#34d399",
+    "background": "#071426",
+    "backgroundGradient": "linear-gradient(180deg, #071426 0%, #0b1f3a 100%)",
+    "text": "#f8fafc",
+    "textMuted": "rgba(248,250,252,0.82)"
+  },
+  "background": "10-ai-console.png",
+  "motion": {
+    "entrance": "terminal-rise",
+    "emphasis": "accent-line",
+    "ambient": "status-line-drift",
+    "easing": "ease-out-expo",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

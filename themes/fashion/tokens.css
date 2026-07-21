@@ -1,0 +1,106 @@
+/* Fashion Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #ff0080;
+  --hf-secondary: #00ffff;
+  --hf-accent: #ffff00;
+  --hf-bg: #000000;
+  --hf-bg-gradient: linear-gradient(180deg, #000000 0%, #1a0a1a 100%);
+  --hf-text: #ffffff;
+  --hf-text-muted: rgba(255, 255, 255, 0.9);
+
+  /* Text Colors */
+  --hf-title-color: #ffffff;
+  --hf-subtitle-color: rgba(255, 255, 255, 0.9);
+  --hf-highlight: #ff0080;
+
+  /* Background */
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+
+  /* Fonts */
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes */
+  --hf-size-title: 80px;
+  --hf-size-subtitle: 36px;
+  --hf-size-body: 28px;
+  --hf-size-caption: 20px;
+
+  /* Font Weights */
+  --hf-weight-bold: 900;
+  --hf-weight-medium: 600;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 2px;
+  --hf-radius-md: 4px;
+  --hf-radius-lg: 8px;
+  --hf-radius-xl: 12px;
+
+  /* Shadows */
+  --hf-shadow-neon: 0 10px 28px rgba(0, 0, 0, 0.3);
+  --hf-shadow-text: 0 4px 20px rgba(0, 0, 0, 0.8);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --hf-duration-fast: 0.15s;
+  --hf-duration-normal: 0.3s;
+  --hf-duration-slow: 0.6s;
+
+  --hf-text-glow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+  letter-spacing: -0.02em;
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-transform: uppercase;
+  text-shadow: var(--hf-text-glow);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Fashion-specific: editorial border */
+.hf-neon-border {
+  border: 2px solid var(--hf-primary);
+  box-shadow: none;
+}
+
+/* Fashion-specific: Speed Lines */
+.hf-speed-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 100px,
+    rgba(255, 0, 128, 0.1) 100px,
+    rgba(255, 0, 128, 0.1) 102px
+  );
+  pointer-events: none;
+}

@@ -1,0 +1,49 @@
+{
+  "id": "viral-hook",
+  "nameZh": "爆款钩子",
+  "nameEn": "Viral Hook",
+  "mood": "大字压迫感、反差色、强观点框",
+  "keywords": [
+    "钩子",
+    "爆款",
+    "开头",
+    "反差",
+    "强观点",
+    "转化",
+    "停留",
+    "前三秒"
+  ],
+  "colors": {
+    "primary": "#ef4444",
+    "secondary": "#2563eb",
+    "accent": "#facc15",
+    "background": "#0a0a0a",
+    "backgroundGradient": "linear-gradient(180deg, #0a0a0a 0%, #111827 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.82)"
+  },
+  "background": "30-viral-hook.png",
+  "motion": {
+    "entrance": "impact-rise",
+    "emphasis": "accent-line",
+    "ambient": "directional-line-pulse",
+    "easing": "ease-out-back",
+    "rhythm": "fast",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

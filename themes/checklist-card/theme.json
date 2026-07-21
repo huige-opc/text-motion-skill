@@ -1,0 +1,49 @@
+{
+  "id": "checklist-card",
+  "nameZh": "清单卡片",
+  "nameEn": "Checklist Card",
+  "mood": "大号 checklist、编号步骤、收藏感",
+  "keywords": [
+    "清单",
+    "检查表",
+    "步骤",
+    "SOP",
+    "收藏",
+    "方法清单",
+    "避坑列表",
+    "操作指南"
+  ],
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#14b8a6",
+    "accent": "#f59e0b",
+    "background": "#f8fafc",
+    "backgroundGradient": "linear-gradient(180deg, #ffffff 0%, #ecfeff 100%)",
+    "text": "#0f172a",
+    "textMuted": "rgba(15,23,42,0.72)"
+  },
+  "background": "20-checklist-card.png",
+  "motion": {
+    "entrance": "card-pop",
+    "emphasis": "accent-line",
+    "ambient": "none",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

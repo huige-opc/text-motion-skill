@@ -1,0 +1,50 @@
+/* =============================================================
+ * Huige AI · Player Chrome
+ * viewport / 舞台
+ * ============================================================= */
+body{
+  display:flex;align-items:center;justify-content:center;
+}
+.viewport{
+  width:min(1600px, 96vw);
+  aspect-ratio:16/9;position:relative;
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,.5);
+  background:var(--hf-bg);
+}
+
+/* Scanline overlay — 细微CRT质感 */
+.viewport::after{
+  content:'';
+  position:absolute;inset:0;z-index:999;
+  pointer-events:none;
+  background:repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px
+  );
+}
+
+.scene{
+  position:absolute;inset:0;
+}
+
+/* 网格背景 + 流动效果 */
+.grid-bg{
+  background-image:
+    linear-gradient(var(--tvp-grid-line,rgba(107,104,98,0.12)) 1px,transparent 1px),
+    linear-gradient(90deg,var(--tvp-grid-line,rgba(107,104,98,0.12)) 1px,transparent 1px);
+  background-size:48px 48px;
+  animation:grid-drift-48 8s linear infinite;
+}
+@keyframes grid-drift-48{
+  to{background-position:48px 48px}
+}
+@keyframes grid-drift-56{
+  to{background-position:56px 56px}
+}
+
+/* 场景背景网格流动 (匹配常见bg类名) */
+.s3-bg, .s4-bg, .s5-bg, .c6-bg, .s7-bg{
+  background-size:56px 56px !important;
+  animation:grid-drift-56 10s linear infinite !important;
+}

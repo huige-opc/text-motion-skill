@@ -1,0 +1,49 @@
+{
+  "id": "blueprint",
+  "nameZh": "蓝图教程",
+  "nameEn": "Blueprint",
+  "mood": "蓝白线框、步骤流、流程箭头",
+  "keywords": [
+    "教程",
+    "步骤",
+    "手把手",
+    "SOP",
+    "流程",
+    "脚本",
+    "Skill",
+    "制作方法"
+  ],
+  "colors": {
+    "primary": "#2563eb",
+    "secondary": "#38bdf8",
+    "accent": "#0f172a",
+    "background": "#eff6ff",
+    "backgroundGradient": "linear-gradient(180deg, #f8fbff 0%, #dbeafe 100%)",
+    "text": "#0f172a",
+    "textMuted": "rgba(15,23,42,0.72)"
+  },
+  "background": "17-blueprint.png",
+  "motion": {
+    "entrance": "clean-reveal",
+    "emphasis": "accent-line",
+    "ambient": "subtle-grid-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

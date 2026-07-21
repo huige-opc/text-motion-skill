@@ -1,0 +1,97 @@
+/* =============================================================
+ * Huige AI · Shared Components
+ * mac-window / stat-pill / mock-card / big-title / etc.
+ * ============================================================= */
+
+/* ============== 大标题系统 ============== */
+.center-stage{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:22px;padding:0 80px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:18px;color:var(--hf-text-muted);
+  padding:8px 18px;border:1px solid var(--tvp-grid-line);
+  background:var(--hf-bg-surface);border-radius:999px;
+}
+.eyebrow .d{width:8px;height:8px;border-radius:50%;background:var(--hf-primary)}
+.big-hint{font-size:32px;color:var(--hf-text-muted);font-weight:400;letter-spacing:.02em}
+.big-title{
+  font-size:var(--tvp-fs-h1);font-weight:800;line-height:1.12;text-align:center;
+  color:var(--hf-text);letter-spacing:.01em;
+}
+.big-title .hi{color:var(--hf-primary)}
+.big-sub{font-size:24px;color:var(--hf-text-muted);text-align:center;max-width:960px;line-height:1.5}
+
+/* ============== 数据 pill ============== */
+.stat-row{display:flex;gap:16px}
+.stat-pill{
+  background:var(--tvp-bg-surface);border-radius:14px;
+  padding:16px 26px;box-shadow:var(--tvp-shadow-card);
+  display:flex;align-items:baseline;gap:10px;
+}
+.stat-pill .n{
+  font-size:36px;font-weight:800;color:var(--hf-primary);
+  font-variant-numeric:tabular-nums;min-width:44px;text-align:right;
+}
+.stat-pill .t{font-size:16px;color:var(--hf-text-muted)}
+
+/* ============== macOS 窗口壳 ============== */
+.mac-window{
+  background:var(--tvp-bg-surface);border-radius:var(--tvp-r-window);
+  box-shadow:var(--tvp-shadow-mock);overflow:hidden;
+}
+.mac-window .titlebar{
+  height:42px;background:var(--tvp-bg-2);
+  display:flex;align-items:center;padding:0 16px;position:relative;
+  border-bottom:1px solid var(--tvp-grid-line);
+}
+.mac-window .dots{display:flex;gap:7px}
+.mac-window .dot{width:11px;height:11px;border-radius:50%}
+.mac-window .dot.red{background:color-mix(in srgb,var(--hf-primary) 82%,var(--hf-text))}
+.mac-window .dot.yellow{background:var(--hf-secondary)}
+.mac-window .dot.green{background:color-mix(in srgb,var(--hf-accent) 70%,var(--hf-secondary))}
+.mac-window .titlebar-text{
+  position:absolute;left:50%;transform:translateX(-50%);
+  font-size:14px;color:var(--hf-text-muted);letter-spacing:.02em;
+}
+.mac-window.dark{background:var(--tvp-dark-1)}
+.mac-window.dark .titlebar{
+  background:var(--tvp-dark-2);border-bottom-color:rgba(255,255,255,.06);
+}
+.mac-window.dark .titlebar-text{color:var(--tvp-dark-muted)}
+
+/* ============== 通用 SVG 描线图标 ============== */
+.svg-stroke path,.svg-stroke circle,.svg-stroke line,
+.svg-stroke rect,.svg-stroke polyline,.svg-stroke polygon{
+  fill:none;stroke:currentColor;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+
+/* ============== 打字机光标 ============== */
+.type-caret{
+  display:inline-block;width:2px;height:.9em;background:var(--hf-primary);
+  vertical-align:-.06em;margin-left:2px;
+  animation:blink 1s infinite;
+}
+@keyframes blink{50%{opacity:0}}
+
+/* ============== 深色场景常用 ============== */
+.dark-stage{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,color-mix(in srgb,var(--hf-primary) 30%,var(--hf-text)) 0%,var(--hf-text) 70%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.dark-stage::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%,color-mix(in srgb,var(--hf-primary) 50%,transparent),transparent),
+    radial-gradient(1px 1px at 75% 20%,color-mix(in srgb,var(--hf-primary) 40%,transparent),transparent),
+    radial-gradient(1px 1px at 40% 70%,color-mix(in srgb,var(--hf-primary) 45%,transparent),transparent),
+    radial-gradient(1px 1px at 85% 65%,color-mix(in srgb,var(--hf-primary) 35%,transparent),transparent),
+    radial-gradient(1px 1px at 15% 80%,color-mix(in srgb,var(--hf-primary) 40%,transparent),transparent),
+    radial-gradient(1px 1px at 60% 45%,color-mix(in srgb,var(--hf-primary) 50%,transparent),transparent);
+  pointer-events:none;
+}

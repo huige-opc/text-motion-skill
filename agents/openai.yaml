@@ -1,0 +1,7 @@
+interface:
+  display_name: "文字动画视频"
+  short_description: "把 SRT 字幕生成统一风格的文字动画视频"
+  brand_color: "#3B82F6"
+  default_prompt: "Use $text-motion-skill to turn my SRT subtitles into a text-animation video for review."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,70 @@
+<!-- ════════════════════════════════════════════════════════════════
+ 🚫 这不是模板，是「机制说明书 / 骨架」— portrait-right。
+
+ 禁止照抄以下任何视觉元素。你只有一个任务：
+ 用 window.AX 做 RAF 揭示 + 参照 scene-creator.md v3 血训章节。
+
+ v3 铁律：
+ - 眉标 20px/700，主标题 lh:1.5，副标题/引文 lh:1.8，正文 lh:1.6
+ - 只用纯 JS RAF（el.style.opacity/transform），不用 CSS animation
+ - 长文本在 · 处主动 <br> 断行
+ - position:absolute 必须 white-space:nowrap
+ - portrait 模式保留右侧（或左侧）人像安全区
+ - 颜色走 var(--hf-*)
+═══════════════════════════════════════════════════════════════════ -->
+
+/* =============================================================
+ * _skeleton.html — 场景骨架（写新场景时复制改名）
+ * ============================================================= */
+
+/* ── 根容器 ── */
+.sk{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 80px 0 120px;overflow:hidden;width:55%}
+
+/* ── 元素 ── */
+.sk .eb{display:inline-flex;align-items:center;gap:10px;padding:10px 24px;border-radius:999px;font-size:20px;font-weight:700;color:var(--hf-text-muted);border:1px solid color-mix(in srgb,var(--hf-text-muted) 14%,transparent);background:#fff;opacity:0;transform:translateY(14px);margin-bottom:48px}
+.sk .eb .d{width:7px;height:7px;border-radius:50%;background:var(--hf-primary);box-shadow:0 0 0 4px color-mix(in srgb,var(--hf-primary) 16%,transparent)}
+.sk .t{font-size:72px;font-weight:800;color:var(--hf-text);line-height:1.5;text-align:left;opacity:0;transform:translateY(20px)}
+.sk .sb{font-size:26px;color:var(--hf-text-muted);line-height:1.8;text-align:left;margin-top:48px;opacity:0;transform:translateY(14px)}
+.br{position:absolute;bottom:22px;left:50%;display:flex;align-items:center;gap:12px;opacity:0;transform:translate(-50%,10px)}
+.br .bt{width:180px;height:3px;border-radius:2px;background:color-mix(in srgb,var(--hf-text-muted) 12%,transparent);overflow:hidden}
+.br .bt .bf{height:100%;width:0;background:var(--hf-primary);border-radius:2px}
+.br .bl{font-size:11px;color:var(--hf-text-muted);font-family:monospace;letter-spacing:1px;opacity:.6}
+</style>
+
+<div class="sk">
+  <div class="eb"><span class="d"></span>眼眉文字</div>
+  <div class="t">标题文字</div>
+  <div class="sb">副标题或补充说明</div>
+</div>
+<div class="br"><div class="bt"><div class="bf"></div></div><span class="bl">00 / XX</span></div>
+
+<script>
+(function(){
+  var SCENE_OFFSET=0,SCENE_DUR=8;
+  var a=document.getElementById('audio-player');if(!a||!window.AX)return;
+  var X=window.AX,d={};
+  var enterT=null;
+  function tk(){
+    var r=document.querySelector('.sk');if(!r)return;
+    var ct=a.currentTime-SCENE_OFFSET;
+    if(ct<0){ requestAnimationFrame(tk); return; }
+    if(enterT===null) enterT=performance.now();
+    var localT=(performance.now()-enterT)/1000;
+
+    if(localT>=0.0&&!d.eb){d.eb=1;X.fadeUp(r.querySelector('.eb'),500,14)}
+    if(localT>=0.3&&!d.t){d.t=1;X.fadeUp(r.querySelector('.t'),650,20)}
+
+    /* 多卡片 stagger 用 localT：
+       if(localT>=1.5&&!d.c1){d.c1=1;X.fadeUp(cards[0],550,24)}
+       if(localT>=2.4&&!d.c2){d.c2=1;X.fadeUp(cards[1],550,24)} */
+
+    /* 同步用 ct：
+       if(ct>=6.5&&!d.ft){d.ft=1;X.fadeUp(r.querySelector('.ft'),550,12)} */
+
+    if(!d.br){d.br=1;X.fadeUpBar(r.querySelector('.br'),500)}
+    var bf=r.querySelector('.br .bf');if(bf)bf.style.width=Math.min(100,Math.max(0,ct*100/SCENE_DUR))+'%';
+    requestAnimationFrame(tk);
+  }
+  requestAnimationFrame(tk);
+})();
+</script>

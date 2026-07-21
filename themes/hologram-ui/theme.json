@@ -1,0 +1,47 @@
+{
+  "id": "hologram-ui",
+  "nameZh": "全息界面",
+  "nameEn": "Hologram UI",
+  "mood": "深色空间、半透明线框、立体界面感",
+  "keywords": [
+    "全息",
+    "概念产品",
+    "未来产品",
+    "智能硬件",
+    "发布会",
+    "未来界面"
+  ],
+  "colors": {
+    "primary": "#22d3ee",
+    "secondary": "#818cf8",
+    "accent": "#67e8f9",
+    "background": "#061629",
+    "backgroundGradient": "linear-gradient(180deg, #061629 0%, #0b2440 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.82)"
+  },
+  "background": "12-hologram-ui.png",
+  "motion": {
+    "entrance": "hologram-reveal",
+    "emphasis": "accent-line",
+    "ambient": "wireframe-drift",
+    "easing": "ease-out-expo",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "premium-dark",
+  "nameZh": "高级暗色",
+  "nameEn": "Premium Dark",
+  "mood": "黑灰、低饱和金属色、发布会感",
+  "keywords": [
+    "高端",
+    "高级",
+    "发布会",
+    "品牌升级",
+    "咨询",
+    "高价值",
+    "精品",
+    "高客单"
+  ],
+  "colors": {
+    "primary": "#d6a15c",
+    "secondary": "#9ca3af",
+    "accent": "#f5f5f4",
+    "background": "#090909",
+    "backgroundGradient": "linear-gradient(180deg, #090909 0%, #1c1917 100%)",
+    "text": "#fffaf0",
+    "textMuted": "rgba(255,250,240,0.78)"
+  },
+  "background": "14-premium-dark.png",
+  "motion": {
+    "entrance": "side-reveal",
+    "emphasis": "accent-line",
+    "ambient": "soft-light-sweep",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

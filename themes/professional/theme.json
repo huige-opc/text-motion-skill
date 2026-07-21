@@ -1,0 +1,17 @@
+{
+  "id": "professional",
+  "nameZh": "专业 Professional",
+  "nameEn": "Professional",
+  "mood": "专业、清晰、可信赖",
+  "keywords": ["咨询", "教育", "培训", "知识", "方案", "方法"],
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#10b981",
+    "accent": "#f59e0b",
+    "background": "#f8fafc",
+    "backgroundGradient": "linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%)",
+    "text": "#1e293b",
+    "textMuted": "rgba(30,41,59,0.75)"
+  },
+  "background": "06-professional-v2.png"
+}

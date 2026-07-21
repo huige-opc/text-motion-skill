@@ -1,0 +1,99 @@
+/* Professional Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #3b82f6;
+  --hf-secondary: #10b981;
+  --hf-accent: #f59e0b;
+  --hf-bg: #f8fafc;
+  --hf-bg-gradient: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  --hf-text: #1e293b;
+  --hf-text-muted: rgba(30, 41, 59, 0.75);
+
+  /* Text Colors */
+  --hf-title-color: #1e293b;
+  --hf-subtitle-color: rgba(30, 41, 59, 0.85);
+  --hf-highlight: #3b82f6;
+
+  /* Background */
+  --hf-overlay-gradient: rgba(255, 255, 255, 0.9);
+
+  /* Fonts */
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes */
+  --hf-size-title: 64px;
+  --hf-size-subtitle: 28px;
+  --hf-size-body: 22px;
+  --hf-size-caption: 16px;
+
+  /* Font Weights */
+  --hf-weight-bold: 700;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 4px;
+  --hf-radius-md: 8px;
+  --hf-radius-lg: 12px;
+  --hf-radius-xl: 16px;
+
+  /* Shadows */
+  --hf-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hf-shadow-text: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.15s;
+  --hf-duration-normal: 0.3s;
+  --hf-duration-slow: 0.5s;
+
+  /* Text Shadow (Minimal) */
+  --hf-text-shadow: none;
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-shadow: var(--hf-text-shadow);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Professional-specific: Clean Card */
+.hf-clean-card {
+  background: var(--hf-bg);
+  border-radius: var(--hf-radius-lg);
+  box-shadow: var(--hf-shadow-card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Professional-specific: Minimal Accent */
+.hf-minimal-accent {
+  color: var(--hf-primary);
+  font-weight: var(--hf-weight-bold);
+}

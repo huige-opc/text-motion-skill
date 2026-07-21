@@ -1,0 +1,103 @@
+/* Tech Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #00d4ff;
+  --hf-secondary: #a855f7;
+  --hf-accent: #00ff88;
+  --hf-bg: #0a0a1a;
+  --hf-bg-gradient: linear-gradient(180deg, #0a0a1a 0%, #001a2e 100%);
+  --hf-text: #ffffff;
+  --hf-text-muted: rgba(255, 255, 255, 0.85);
+
+  /* Text Colors */
+  --hf-title-color: #ffffff;
+  --hf-subtitle-color: rgba(255, 255, 255, 0.85);
+  --hf-highlight: #00d4ff;
+
+  /* Background */
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(0, 20, 50, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  /* Fonts */
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+
+  /* Font Sizes */
+  --hf-size-title: 72px;
+  --hf-size-subtitle: 32px;
+  --hf-size-body: 24px;
+  --hf-size-caption: 18px;
+
+  /* Font Weights */
+  --hf-weight-bold: 800;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 4px;
+  --hf-radius-md: 8px;
+  --hf-radius-lg: 16px;
+  --hf-radius-xl: 24px;
+
+  /* Shadows */
+  --hf-shadow-glow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  --hf-shadow-text: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.2s;
+  --hf-duration-normal: 0.4s;
+  --hf-duration-slow: 0.8s;
+
+  /* Text shadow stays neutral; color is carried by small accents. */
+  --hf-text-glow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-shadow: var(--hf-text-glow);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Tech-specific: Grid Overlay */
+.hf-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Tech-specific: precise border */
+.hf-neon-border {
+  box-shadow: none;
+  border: 1px solid var(--hf-primary);
+}

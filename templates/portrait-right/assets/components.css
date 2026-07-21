@@ -1,0 +1,213 @@
+/* =============================================================
+ * Components.css
+ * Shared component styles + universal @keyframes
+ *
+ * 所有场景共用的组件样式和动画定义。
+ * 各场景通过 #mount.reveal-xxx 类名触发。
+ * ============================================================= */
+
+/* ════════════════════════════════════════════════════════════
+   通用动画曲线变量
+   ════════════════════════════════════════════════════════════ */
+:root {
+  --ease-elastic:   cubic-bezier(.2,1.3,.4,1);     /* 微过冲弹入 */
+  --ease-bounce:    cubic-bezier(.34,1.56,.64,1);   /* 强过冲弹入 */
+  --ease-smooth:    cubic-bezier(.2,.7,.2,1);       /* 温和入场 */
+  --ease-standard:  ease-out;                        /* 标准淡入 */
+  --dur-fast:       0.35s;
+  --dur-normal:     0.5s;
+  --dur-slow:       0.7s;
+}
+
+/* ════════════════════════════════════════════════════════════
+   通用 @keyframes
+   （各场景可直接引用，无需重复定义）
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 淡入上浮（通用文本入场） ── */
+@keyframes up-fade{
+  from{opacity:0;transform:translateY(var(--uf-y, 16px))}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── 弹性弹入（卡片/大块元素） ── */
+@keyframes elastic-in{
+  0%{opacity:0;transform:translateY(var(--ei-y, 24px)) scale(var(--ei-scale, 0.92))}
+  55%{opacity:1;transform:translateY(calc(var(--ei-y, 24px) * -0.17)) scale(1.02)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* ── 旋转弹入（问号/图标） ── */
+@keyframes pop-rotate{
+  0%{opacity:0;transform:rotate(var(--pr-deg, -25deg)) scale(0.3)}
+  55%{opacity:1;transform:rotate(calc(var(--pr-deg, -25deg) * -0.48)) scale(1.1)}
+  to{opacity:1;transform:rotate(0deg) scale(1)}
+}
+
+/* ── 缩放弹入（徽章/标签/圆环） ── */
+@keyframes pop-scale{
+  from{opacity:0;transform:scale(0)}
+  to{opacity:1;transform:scale(1)}
+}
+
+/* ── 旋转缩放弹入（带旋转的徽章） ── */
+@keyframes pop-scale-rotate{
+  from{opacity:0;transform:scale(0) rotate(var(--psr-deg, -25deg))}
+  to{opacity:1;transform:scale(1) rotate(0deg)}
+}
+
+/* ── 水平展开（下划线/连接线/进度条/强调条） ── */
+@keyframes scale-x{
+  from{transform:scaleX(0)}
+  to{transform:scaleX(1)}
+}
+
+/* ── 垂直展开（柱状图生长） ── */
+@keyframes scale-y{
+  from{transform:scaleY(0)}
+  to{transform:scaleY(1)}
+}
+
+/* ── 纯淡入（装饰元素） ── */
+@keyframes fade-only{
+  from{opacity:0}
+  to{opacity:var(--fo-opacity, 0.12)}
+}
+
+/* ── SVG stroke 绘制动画（手绘线条） ── */
+@keyframes draw-in{
+  from{stroke-dashoffset:var(--di-offset, 1000)}
+  to{stroke-dashoffset:0}
+}
+
+/* ── 网格背景流动 ── */
+@keyframes grid-drift{
+  to{background-position:var(--gd-x, 48px) var(--gd-y, 48px)}
+}
+
+/* ── 打字机效果（逐字显示） ── */
+@keyframes typewriter{
+  from{width:0}
+  to{width:var(--tw-width, 100%)}
+}
+.typewriter{
+  display:inline-block;overflow:hidden;white-space:nowrap;
+  animation:typewriter var(--tw-dur, 1.5s) steps(var(--tw-steps, 20), end) both;
+  border-right:2px solid var(--hf-primary);
+}
+
+/* ── 管道流动效果（流动条 progress） ── */
+@keyframes pipe-flow{
+  0%{background-position:0 0}
+  100%{background-position:var(--pf-dist, 40px) 0}
+}
+.pipe-fill{
+  height:100%;border-radius:2px;
+  background:repeating-linear-gradient(
+    90deg,
+    var(--hf-primary) 0px, var(--hf-primary) 8px,
+    transparent 8px, transparent 16px
+  );
+  background-size:var(--pf-dist, 40px) 100%;
+  animation:pipe-flow var(--pf-dur, 0.6s) linear infinite;
+}
+
+/* ── 微光扫描 ── */
+@keyframes shimmer-sweep{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(200%)}
+}
+.shimmer{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--hf-text) 15%, transparent) 50%, transparent 100%);
+  transform:translateX(-100%);
+}
+
+/* ── 能量环扩散 ── */
+@keyframes er-pulse-1{
+  0%{transform:scale(0.3);opacity:0.6;border-width:3px}
+  100%{transform:scale(2.5);opacity:0;border-width:1px}
+}
+@keyframes er-pulse-2{
+  0%{transform:scale(0.3);opacity:0.4;border-width:2px}
+  100%{transform:scale(2.2);opacity:0;border-width:1px}
+}
+@keyframes er-pulse-3{
+  0%{transform:scale(0.3);opacity:0.3;border-width:2px}
+  100%{transform:scale(1.8);opacity:0;border-width:1px}
+}
+@keyframes er-rotate{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* ════════════════════════════════════════════════════════════
+   Micro-Component 基础样式
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Eyebrow chip（眉标） ── */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 24px;
+  border:1px solid color-mix(in srgb, var(--hf-text-muted,#6B6862) 15%, transparent);
+  background:var(--hf-bg-surface);
+  border-radius:999px;
+  font-size:20px;color:var(--hf-subtitle-color,#6B6862);
+  width:max-content;
+  opacity:0;transform:translateY(14px);
+}
+.eyebrow .dot{
+  width:9px;height:9px;border-radius:50%;
+  background:var(--hf-primary,#C15F3C);
+}
+.eyebrow .hl{color:var(--hf-primary,#C15F3C);font-weight:700}
+
+/* ── Badge（数字角标） ── */
+.badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:8px;
+  background:var(--hf-primary,#C15F3C);color:#fff;
+  font-size:14px;font-weight:800;font-family:'Consolas',monospace;
+  box-shadow:0 3px 10px color-mix(in srgb, var(--hf-primary,#C15F3C) 30%, transparent);
+  opacity:0;transform:scale(0) rotate(-25deg);
+}
+
+/* ── Tag（标签 pill） ── */
+.tag{
+  display:inline-block;padding:3px 10px;border-radius:5px;
+  font-size:13px;font-weight:700;
+  background:color-mix(in srgb, var(--hf-bg,#FAF9F5) 90%, var(--hf-primary,#C15F3C));
+  color:var(--hf-primary,#C15F3C);
+  border:1px solid color-mix(in srgb, var(--hf-primary,#C15F3C) 15%, transparent);
+  line-height:1.4;
+  opacity:0;transform:scale(0.7) translateY(4px);
+}
+
+/* ── Underline（下划线） ── */
+.underline{
+  position:absolute;left:0;right:0;bottom:-4px;
+  height:4px;background:var(--hf-primary,#C15F3C);
+  opacity:0.4;border-radius:2px;
+  transform:scaleX(0);transform-origin:left;
+}
+
+/* ── Progress bar（进度条） ── */
+.progress-bar{
+  width:100%;height:4px;
+  background:color-mix(in srgb, var(--hf-text-muted,#6B6862) 6%, transparent);
+  border-radius:2px;overflow:hidden;opacity:0;
+}
+.progress-fill{
+  height:100%;width:100%;
+  background:linear-gradient(90deg,var(--hf-primary,#C15F3C),var(--hf-secondary,#E8A96A));
+  border-radius:2px;transform:scaleX(0);transform-origin:left;
+}
+
+/* ── Bottom progress bar（底条进度条） ── */
+.bottom-bar{
+  display:flex;align-items:center;gap:14px;
+  opacity:0;transform:translateY(16px);
+}
+.bottom-bar .track{flex:1;height:3px;border-radius:2px;background:color-mix(in srgb, var(--hf-text-muted,#6B6862) 12%, transparent);overflow:hidden;position:relative}
+.bottom-bar .track .fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--hf-primary,#C15F3C);border-radius:2px}
+.bottom-bar .lbl{font-size:13px;color:color-mix(in srgb, var(--hf-text-muted,#6B6862) 40%, transparent);font-family:'Consolas',monospace;font-weight:500;white-space:nowrap}

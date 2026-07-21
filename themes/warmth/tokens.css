@@ -1,0 +1,86 @@
+/* Warmth Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #fb923c;
+  --hf-secondary: #f472b6;
+  --hf-accent: #fcd34d;
+  --hf-bg: #1a0a05;
+  --hf-bg-gradient: linear-gradient(180deg, #1a0a05 0%, #2a1510 100%);
+  --hf-text: #fff8f0;
+  --hf-text-muted: rgba(255, 248, 240, 0.85);
+
+  /* Text Colors */
+  --hf-title-color: #fff8f0;
+  --hf-subtitle-color: rgba(255, 248, 240, 0.9);
+  --hf-highlight: #fb923c;
+
+  /* Background */
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(50, 20, 10, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  /* Fonts */
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Sizes */
+  --hf-size-title: 68px;
+  --hf-size-subtitle: 30px;
+  --hf-size-body: 24px;
+  --hf-size-caption: 18px;
+
+  /* Font Weights */
+  --hf-weight-bold: 700;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 8px;
+  --hf-radius-md: 16px;
+  --hf-radius-lg: 24px;
+  --hf-radius-xl: 32px;
+
+  /* Shadows */
+  --hf-shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --hf-shadow-text: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.25s;
+  --hf-duration-normal: 0.5s;
+  --hf-duration-slow: 1s;
+
+  --hf-text-glow: none;
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-shadow: var(--hf-shadow-text);
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Warmth uses soft color contrast and restrained static accents. */

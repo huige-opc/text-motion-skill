@@ -1,0 +1,49 @@
+{
+  "id": "finance-terminal",
+  "nameZh": "金融终端",
+  "nameEn": "Finance Terminal",
+  "mood": "深色行情盘、数字表格、价格线",
+  "keywords": [
+    "金融",
+    "投资",
+    "财报",
+    "市场数据",
+    "行情",
+    "收益",
+    "价格",
+    "股票"
+  ],
+  "colors": {
+    "primary": "#d6a15c",
+    "secondary": "#14b8a6",
+    "accent": "#ef4444",
+    "background": "#081521",
+    "backgroundGradient": "linear-gradient(180deg, #081521 0%, #0f2535 100%)",
+    "text": "#f8fafc",
+    "textMuted": "rgba(226,232,240,0.82)"
+  },
+  "background": "15-finance-terminal.png",
+  "motion": {
+    "entrance": "data-rise",
+    "emphasis": "accent-line",
+    "ambient": "grid-depth-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

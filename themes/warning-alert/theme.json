@@ -1,0 +1,49 @@
+{
+  "id": "warning-alert",
+  "nameZh": "警示避坑",
+  "nameEn": "Warning Alert",
+  "mood": "黑黄/红、风险等级、错误框",
+  "keywords": [
+    "避坑",
+    "风险",
+    "错误",
+    "不建议",
+    "警示",
+    "注意",
+    "别这样",
+    "失败"
+  ],
+  "colors": {
+    "primary": "#facc15",
+    "secondary": "#ef4444",
+    "accent": "#f8fafc",
+    "background": "#111111",
+    "backgroundGradient": "linear-gradient(180deg, #111111 0%, #1f2937 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.82)"
+  },
+  "background": "28-warning-alert.png",
+  "motion": {
+    "entrance": "impact-rise",
+    "emphasis": "accent-line",
+    "ambient": "warning-line-pulse",
+    "easing": "ease-out-cubic",
+    "rhythm": "fast",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

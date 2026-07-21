@@ -1,0 +1,49 @@
+{
+  "id": "pitch-deck",
+  "nameZh": "融资路演",
+  "nameEn": "Pitch Deck",
+  "mood": "简洁大标题、图表、里程碑",
+  "keywords": [
+    "路演",
+    "融资",
+    "BP",
+    "创业",
+    "项目介绍",
+    "商业计划",
+    "里程碑",
+    "方案展示"
+  ],
+  "colors": {
+    "primary": "#1d4ed8",
+    "secondary": "#64748b",
+    "accent": "#f59e0b",
+    "background": "#f8fafc",
+    "backgroundGradient": "linear-gradient(180deg, #ffffff 0%, #edf4ff 100%)",
+    "text": "#0f172a",
+    "textMuted": "rgba(15,23,42,0.72)"
+  },
+  "background": "16-pitch-deck.png",
+  "motion": {
+    "entrance": "slide-up",
+    "emphasis": "accent-line",
+    "ambient": "none",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

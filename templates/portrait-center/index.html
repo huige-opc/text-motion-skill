@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920,height=1080">
+<title>辉哥AI · 真人口播视频</title>
+<link rel="stylesheet" href="assets/theme-defaults.css">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/tokens-extra.css">
+<link rel="stylesheet" href="assets/chrome.css">
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/components.css">
+</head>
+<body>
+
+<div class="viewport" id="viewport">
+  <!-- 全屏视频背景（用户提供自己的视频） -->
+  <div class="video-bg" id="video-bg">
+    <div id="portrait-el"></div>
+  </div>
+
+  <!-- 左侧浮动内容 -->
+  <div class="p-left">
+    <div id="mount-left" class="scene active"></div>
+  </div>
+
+  <!-- 右侧浮动内容 -->
+  <div class="p-right">
+    <div id="mount-right" class="scene active"></div>
+  </div>
+
+  <audio id="audio-player" preload="auto" crossorigin="anonymous">
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

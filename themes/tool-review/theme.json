@@ -1,0 +1,49 @@
+{
+  "id": "tool-review",
+  "nameZh": "工具测评",
+  "nameEn": "Tool Review",
+  "mood": "对比卡、评分条、优缺点矩阵",
+  "keywords": [
+    "测评",
+    "对比",
+    "哪个好",
+    "推荐",
+    "优缺点",
+    "模型清单",
+    "插件",
+    "工具"
+  ],
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#14b8a6",
+    "accent": "#fb923c",
+    "background": "#f8fafc",
+    "backgroundGradient": "linear-gradient(180deg, #ffffff 0%, #eef6ff 100%)",
+    "text": "#0f172a",
+    "textMuted": "rgba(15,23,42,0.72)"
+  },
+  "background": "24-tool-review.png",
+  "motion": {
+    "entrance": "compare-reveal",
+    "emphasis": "accent-line",
+    "ambient": "none",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

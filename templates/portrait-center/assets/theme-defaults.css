@@ -1,0 +1,45 @@
+/* =============================================================
+ * Theme Defaults · 主题变量兜底
+ *
+ * 加载顺序：本文件必须在 tokens.css（主题）之前加载
+ * 作用：给场景里可能用到的"扩展变量"提供默认值。
+ *      主题 tokens.css 如果重新定义了这些变量，会自动覆盖。
+ *
+ * 设计要点：所有默认值都是"主题感知"的，用 color-mix + var(--hf-*) 
+ *          派生，这样浅底/深底主题都能自动反相，不会出现白底白字。
+ * ============================================================= */
+:root {
+  /* ── 语义色（成功 / 信息，主题独立的固定色） ── */
+  --hf-info:         #5B7BA8;
+  --hf-pos:          #4A7C4E;
+
+  /* ── 表面背景 · 卡片底 ────────────────────
+   * 浅底主题（bg 是浅色）→ 卡片 = 微白偏亮
+   * 深底主题（bg 是深色）→ 卡片 = 微亮的透明层
+   * 用 --hf-text 派生：--hf-text 是白 → 白色 6% 叠加；--hf-text 是黑 → 黑色 6% 叠加
+   * 这样卡片永远比背景亮一点点，和文字色永远反差 */
+  --hf-bg-surface:   color-mix(in srgb, var(--hf-text) 8%, var(--hf-bg));
+  --hf-bg-alt:       color-mix(in srgb, var(--hf-text) 4%, var(--hf-bg));
+
+  /* ── 弱化文字（tokens.css 主题里通常只定义 --hf-text-muted，这层再弱一点） ── */
+  --hf-text-faint:   color-mix(in srgb, var(--hf-text) 45%, transparent);
+
+  /* ── 深色场景专用（06-finale / 08-finale 用，与主题独立） ── */
+  --hf-dark-text:    #F5F0E6;
+  --hf-dark-1:       #1a1512;
+  --hf-dark-2:       #241d18;
+
+  /* ── 网格线（用 --hf-text 派生，浅底深线 / 深底浅线自动切换） ── */
+  --hf-grid-line:    color-mix(in srgb, var(--hf-text) 8%, transparent);
+
+  /* ── Shadow（用中性黑色，不随主题变） ── */
+  --hf-shadow-card:  0 8px 24px rgba(0,0,0,0.10);
+  --hf-shadow-mock:  0 20px 48px rgba(0,0,0,0.16);
+  --hf-shadow-lift:  0 24px 64px rgba(0,0,0,0.22);
+  --hf-shadow-soft:  0 10px 30px rgba(0,0,0,0.14);
+
+  /* ── 圆角（模板级） ── */
+  --r-window:        16px;
+  --r-card:          20px;
+  --r-pill:          999px;
+}

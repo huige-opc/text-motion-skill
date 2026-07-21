@@ -1,0 +1,85 @@
+<!-- ════════════════════════════════════════════════════════════════
+ 🚫 这不是模板，是「机制说明书」。
+
+ 禁止照抄以下任何视觉元素：列数、间距、字号、卡片形状、颜色、
+ 排列方向、元素数量。这些是随手写的占位值，不是标准答案。
+
+ 你只有一个任务：读懂 window.AX + ct 触发时序 是怎么跑的，然后
+ 用完全不同的视觉把它做出来。每个场景必须明显不同于上一个场景。
+═══════════════════════════════════════════════════════════════════ -->
+
+<!-- ============================================================
+ _type-hook.html — 开场钩子（fullscreen · 大字居中）
+
+ 用途：视频开头，抛痛点/共鸣，钩住观众。
+
+ v3 机制：
+ - CSS 只写元素初始 opacity:0 / transform，禁 @keyframes / animation
+ - 全部靠 window.AX.fadeUp / scaleX 触发（无缓动 var 静默失败风险）
+ - hook 场景元素少、和口播强同步 → 直接用 audio.currentTime (ct)
+ - tick 只写 t>=0，不写 t<SCENE_DUR（防末段丢帧）
+
+ v3 硬约束：
+ - .eb 眉标：font-size:20px; font-weight:700
+ - .t 主标：52-88px（稀疏帧 88，密集 52-64）/ fw:800 / lh:1.5
+ - .sb 副标：24-32px / lh:1.8
+ - .tg pill：font-size:18px; fw:600
+ - 颜色只走 var(--hf-*) / color-mix，禁硬编码
+
+ 常见坑：
+ - 【eb 加载后没高亮】font-weight 写成了 500 → 血训 fw:700
+ - 【tag 竖排】absolute 定位缺 white-space:nowrap
+============================================================ -->
+<style>
+.s1{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 80px;background:var(--hf-bg);overflow:hidden}
+.s1 .eb{display:inline-flex;align-items:center;gap:10px;padding:10px 24px;border-radius:999px;font-size:20px;font-weight:700;color:var(--hf-text-muted);border:1px solid color-mix(in srgb,var(--hf-text-muted) 14%,transparent);background:color-mix(in srgb,var(--hf-bg) 90%,#fff);opacity:0;transform:translateY(14px);margin-bottom:48px}
+.s1 .eb .d{width:7px;height:7px;border-radius:50%;background:var(--hf-primary);box-shadow:0 0 0 4px color-mix(in srgb,var(--hf-primary) 16%,transparent)}
+.s1 .t{font-size:72px;font-weight:800;color:var(--hf-text);line-height:1.5;text-align:center;letter-spacing:.5px;opacity:0;transform:translateY(20px);position:relative}
+.s1 .t .h{color:var(--hf-primary);position:relative;display:inline-block;z-index:1}
+.s1 .t .h .u{position:absolute;left:-4px;right:-4px;bottom:10px;height:12px;background:color-mix(in srgb,var(--hf-primary) 22%,transparent);border-radius:2px;transform:scaleX(0);transform-origin:left;z-index:-1}
+.s1 .sb{font-size:26px;color:var(--hf-text-muted);line-height:1.8;text-align:center;margin-top:44px;opacity:0;transform:translateY(14px);max-width:1100px}
+.s1 .sb .k{color:var(--hf-primary);font-weight:700;padding:0 4px}
+.s1 .tg{display:flex;gap:12px;margin-top:44px}
+.s1 .tg span{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:18px;font-weight:600;background:color-mix(in srgb,var(--hf-primary) 7%,transparent);color:var(--hf-primary);border:1px solid color-mix(in srgb,var(--hf-primary) 14%,transparent);opacity:0;transform:translateY(10px);white-space:nowrap}
+.s1 .tg span svg{width:14px;height:14px;color:currentColor;flex-shrink:0}
+.br{position:absolute;bottom:22px;left:50%;display:flex;align-items:center;gap:12px;opacity:0;transform:translate(-50%,10px)}
+.br .bt{width:180px;height:3px;border-radius:2px;background:color-mix(in srgb,var(--hf-text-muted) 12%,transparent);overflow:hidden}
+.br .bt .bf{height:100%;width:0;background:var(--hf-primary);border-radius:2px}
+.br .bl{font-size:11px;color:var(--hf-text-muted);font-family:monospace;letter-spacing:1px;opacity:.6}
+</style>
+
+<div class="s1">
+  <div class="eb"><span class="d"></span>眉标位置 · 场景说明</div>
+  <div class="t">开场痛点 · <span class="h">强调关键词<span class="u"></span></span></div>
+  <div class="sb">一句话共鸣 · <span class="k">强调词</span>抛出钩子</div>
+  <div class="tg">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>标签一</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3 8 6-16 3 8h4"/></svg>标签二</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>标签三</span>
+  </div>
+</div>
+<div class="br"><div class="bt"><div class="bf"></div></div><span class="bl">01 / NN</span></div>
+
+<script>
+(function(){
+  var SCENE_OFFSET=0, SCENE_DUR=7;
+  var a=document.getElementById('audio-player'); if(!a||!window.AX) return;
+  var X=window.AX, d={};
+  function tk(){
+    var r=document.querySelector('.s1'); if(!r) return;
+    var ct=a.currentTime-SCENE_OFFSET;
+    if(ct>=0){
+      if(ct>0    && !d.eb){d.eb=1; X.fadeUp(r.querySelector('.eb'),500,14)}
+      if(ct>=0.3 && !d.t ){d.t =1; X.fadeUp(r.querySelector('.t'),650,20)}
+      if(ct>=0.9 && !d.u ){d.u =1; X.scaleX(r.querySelector('.t .h .u'),650)}
+      if(ct>=2.3 && !d.sb){d.sb=1; X.fadeUp(r.querySelector('.sb'),550,14)}
+      if(ct>=5.0 && !d.tg){d.tg=1; X.stagger(r.querySelectorAll('.tg span'),110,function(el){X.fadeUp(el,450,10)})}
+      if(!d.br){d.br=1; X.fadeUpBar(r.querySelector('.br'),500)}
+    }
+    var bf=r.querySelector('.br .bf');
+    if(bf) bf.style.width = Math.min(100, Math.max(0, ct*100/SCENE_DUR)) + '%';
+    requestAnimationFrame(tk);
+  }
+  requestAnimationFrame(tk);
+})();
+</script>

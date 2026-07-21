@@ -1,0 +1,49 @@
+{
+  "id": "academic-paper",
+  "nameZh": "学术论文",
+  "nameEn": "Academic Paper",
+  "mood": "论文卡、引用块、严肃排版",
+  "keywords": [
+    "论文",
+    "研究",
+    "报告",
+    "学术",
+    "引用",
+    "实验",
+    "结论",
+    "严肃科普"
+  ],
+  "colors": {
+    "primary": "#0f2742",
+    "secondary": "#8b1e3f",
+    "accent": "#6b7280",
+    "background": "#fbf7ef",
+    "backgroundGradient": "linear-gradient(180deg, #fbf7ef 0%, #f3efe7 100%)",
+    "text": "#111827",
+    "textMuted": "rgba(17,24,39,0.70)"
+  },
+  "background": "19-academic-paper.png",
+  "motion": {
+    "entrance": "soft-rise",
+    "emphasis": "accent-line",
+    "ambient": "editorial-line-drift",
+    "easing": "ease-out-quad",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

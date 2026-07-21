@@ -1,0 +1,49 @@
+{
+  "id": "social-pop",
+  "nameZh": "社媒流行",
+  "nameEn": "Social Pop",
+  "mood": "高饱和、贴纸、浮层、节奏快",
+  "keywords": [
+    "抖音",
+    "小红书",
+    "种草",
+    "社媒",
+    "爆款",
+    "互动",
+    "轻知识",
+    "评论"
+  ],
+  "colors": {
+    "primary": "#06b6d4",
+    "secondary": "#f43f5e",
+    "accent": "#facc15",
+    "background": "#ffffff",
+    "backgroundGradient": "linear-gradient(180deg, #ffffff 0%, #fff7ed 100%)",
+    "text": "#111827",
+    "textMuted": "rgba(17,24,39,0.72)"
+  },
+  "background": "29-social-pop.png",
+  "motion": {
+    "entrance": "pop-rise",
+    "emphasis": "accent-line",
+    "ambient": "shape-float",
+    "easing": "ease-out-back",
+    "rhythm": "fast",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "energy",
+  "nameZh": "活力 Energy",
+  "nameEn": "Energy",
+  "mood": "激情、爆发、冲刺突破",
+  "keywords": ["运动", "突破", "激情", "挑战", "冲刺", "力量"],
+  "colors": {
+    "primary": "#ef4444",
+    "secondary": "#f97316",
+    "accent": "#facc15",
+    "background": "#0f0a0a",
+    "backgroundGradient": "linear-gradient(180deg, #0f0a0a 0%, #1a0a0a 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.9)"
+  },
+  "background": "07-energy-v2.png"
+}

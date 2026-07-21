@@ -1,0 +1,17 @@
+{
+  "id": "nature",
+  "nameZh": "自然 Nature",
+  "nameEn": "Nature",
+  "mood": "清新、自然、生机勃勃",
+  "keywords": ["环保", "绿色", "生态", "户外", "阳光", "生命"],
+  "colors": {
+    "primary": "#22c55e",
+    "secondary": "#f59e0b",
+    "accent": "#38bdf8",
+    "background": "#0a1f0a",
+    "backgroundGradient": "linear-gradient(180deg, #0a1f0a 0%, #1a3a1a 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.85)"
+  },
+  "background": "03-nature-v2.png"
+}

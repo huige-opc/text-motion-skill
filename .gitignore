@@ -1,0 +1,41 @@
+# ── 依赖 ──
+node_modules/
+**/node_modules/
+
+# ── 由 skill 生成的项目文件夹（不上传） ──
+projects/
+
+# ── 敏感文件 ──
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.key
+*.pem
+*.crt
+credentials.json
+secrets.json
+
+# ── 运行时临时/输出 ──
+.tts-temp/
+.tts-temp-*/
+*.log
+out/
+dist/
+build/
+
+# ── 编辑器 / 系统 ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ── 大文件 / 媒体产物（默认不上传，如需示例请单独放 examples/） ──
+*.mp4
+*.mp3
+*.wav
+*.mkv
+*.mov
+
+# ── 锁文件（可选，如需保留删除下一行即可） ──
+package-lock.json

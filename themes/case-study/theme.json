@@ -1,0 +1,49 @@
+{
+  "id": "case-study",
+  "nameZh": "案例档案",
+  "nameEn": "Case Study",
+  "mood": "档案卡、证据链、前后对比",
+  "keywords": [
+    "案例",
+    "复盘",
+    "拆解",
+    "结果",
+    "证据",
+    "前后对比",
+    "项目",
+    "实战"
+  ],
+  "colors": {
+    "primary": "#14b8a6",
+    "secondary": "#d6a15c",
+    "accent": "#f59e0b",
+    "background": "#102022",
+    "backgroundGradient": "linear-gradient(180deg, #102022 0%, #172a2d 100%)",
+    "text": "#f8fafc",
+    "textMuted": "rgba(226,232,240,0.82)"
+  },
+  "background": "25-case-study.png",
+  "motion": {
+    "entrance": "evidence-rise",
+    "emphasis": "accent-line",
+    "ambient": "line-map-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

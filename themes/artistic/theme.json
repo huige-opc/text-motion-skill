@@ -1,0 +1,17 @@
+{
+  "id": "artistic",
+  "nameZh": "文艺 Artistic",
+  "nameEn": "Artistic",
+  "mood": "复古、手工、文艺气息",
+  "keywords": ["故事", "情感", "手工", "文创", "手绘", "生活"],
+  "colors": {
+    "primary": "#d97706",
+    "secondary": "#065f46",
+    "accent": "#7c2d12",
+    "background": "#1a1512",
+    "backgroundGradient": "linear-gradient(180deg, #1a1512 0%, #2a2015 100%)",
+    "text": "#fef3c7",
+    "textMuted": "rgba(254, 243, 199, 0.85)"
+  },
+  "background": "08-artistic-v4.png"
+}

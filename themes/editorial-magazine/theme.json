@@ -1,0 +1,49 @@
+{
+  "id": "editorial-magazine",
+  "nameZh": "杂志编辑风",
+  "nameEn": "Editorial Magazine",
+  "mood": "大标题、留白、图文排版、版式感",
+  "keywords": [
+    "观点",
+    "审美",
+    "杂志",
+    "专题",
+    "人物",
+    "趋势",
+    "图文",
+    "表达"
+  ],
+  "colors": {
+    "primary": "#111111",
+    "secondary": "#d23b3b",
+    "accent": "#b8aa96",
+    "background": "#f7f0e6",
+    "backgroundGradient": "linear-gradient(180deg, #f7f0e6 0%, #eee3d3 100%)",
+    "text": "#111111",
+    "textMuted": "rgba(17,17,17,0.70)"
+  },
+  "background": "22-editorial-magazine.png",
+  "motion": {
+    "entrance": "editorial-scale",
+    "emphasis": "accent-line",
+    "ambient": "editorial-line-drift",
+    "easing": "ease-out-quad",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

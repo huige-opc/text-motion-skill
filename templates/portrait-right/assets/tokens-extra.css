@@ -1,0 +1,51 @@
+/* =============================================================
+ * Huige AI · Extra Tokens (template-owned, theme-independent)
+ *
+ * 这些变量不随主题变化，永远存在。
+ * 主要是：网格线、辅助色、shadow、深色场景专用色。
+ * ============================================================= */
+
+:root {
+  /* ── 辅助背景（比 --hf-bg 稍暗/稍亮的层次色）── */
+  --tvp-bg-2:          rgba(0,0,0,0.04);
+  --tvp-bg-surface:    #FFFFFF;
+
+  /* ── 网格线（用于 grid-bg 装饰）── */
+  --tvp-grid-line:     rgba(107,104,98,0.12);
+
+  /* ── 辅助文字色（--hf-text-muted 之外的更弱层）── */
+  --tvp-ink-3:         rgba(107,104,98,0.55);
+  --tvp-ink-4:         rgba(107,104,98,0.30);
+
+  /* ── 语义色（成功/信息，与主题独立）── */
+  --tvp-pos:           #4A7C4E;
+  --tvp-info:          #5B7BA8;
+
+  /* ── Shadow ── */
+  --tvp-shadow-card:   0 8px 24px rgba(0,0,0,0.06);
+  --tvp-shadow-mock:   0 20px 48px rgba(0,0,0,0.10);
+  --tvp-shadow-lift:   0 24px 64px rgba(0,0,0,0.14);
+
+  /* ── 深色 mac-window 专用 ── */
+  --tvp-dark-1:        #1a1512;
+  --tvp-dark-2:        #241d18;
+  --tvp-dark-muted:    rgba(255,255,255,0.55);
+
+  /* ── 圆角 ── */
+  --tvp-r-window:      14px;
+
+  /* ── 字号 ── */
+  --tvp-fs-h1:         84px;
+}
+
+/* ── 基础重置和字体（不随主题变） ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #2b2622;
+  color: var(--hf-text, #1F1E1D);
+  font-family: "PingFang SC", "HarmonyOS Sans SC", "Source Han Sans SC",
+               "Microsoft YaHei", "Inter", system-ui, sans-serif;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}

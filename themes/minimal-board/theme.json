@@ -1,0 +1,49 @@
+{
+  "id": "minimal-board",
+  "nameZh": "极简白板",
+  "nameEn": "Minimal Board",
+  "mood": "白底黑字、少量高亮、教学板书",
+  "keywords": [
+    "概念",
+    "框架",
+    "解释",
+    "总结",
+    "白板",
+    "极简",
+    "知识点",
+    "方法论"
+  ],
+  "colors": {
+    "primary": "#2563eb",
+    "secondary": "#f59e0b",
+    "accent": "#111827",
+    "background": "#fffdf8",
+    "backgroundGradient": "linear-gradient(180deg, #fffdf8 0%, #f3f4f6 100%)",
+    "text": "#111827",
+    "textMuted": "rgba(17,24,39,0.72)"
+  },
+  "background": "18-minimal-board.png",
+  "motion": {
+    "entrance": "fade-in",
+    "emphasis": "accent-line",
+    "ambient": "none",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

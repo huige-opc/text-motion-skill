@@ -1,0 +1,49 @@
+{
+  "id": "healing-pastel",
+  "nameZh": "治愈粉彩",
+  "nameEn": "Healing Pastel",
+  "mood": "低饱和粉彩、柔和曲线",
+  "keywords": [
+    "治愈",
+    "心理",
+    "成长",
+    "女性向",
+    "轻情绪",
+    "温柔",
+    "自我提升",
+    "疗愈"
+  ],
+  "colors": {
+    "primary": "#fb7185",
+    "secondary": "#a78bfa",
+    "accent": "#2dd4bf",
+    "background": "#fff7ed",
+    "backgroundGradient": "linear-gradient(180deg, #fff7ed 0%, #fdf2f8 100%)",
+    "text": "#3f2f3f",
+    "textMuted": "rgba(63,47,63,0.70)"
+  },
+  "background": "26-healing-pastel.png",
+  "motion": {
+    "entrance": "soft-rise",
+    "emphasis": "accent-line",
+    "ambient": "soft-light-drift",
+    "easing": "ease-out-quad",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

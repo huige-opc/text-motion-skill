@@ -1,0 +1,17 @@
+{
+  "id": "fashion",
+  "nameZh": "时尚 Fashion",
+  "nameEn": "Fashion",
+  "mood": "潮流、酷炫、个性张扬",
+  "keywords": ["潮流", "酷炫", "街头", "年轻", "个性", "态度"],
+  "colors": {
+    "primary": "#ff0080",
+    "secondary": "#00ffff",
+    "accent": "#ffff00",
+    "background": "#000000",
+    "backgroundGradient": "linear-gradient(180deg, #000000 0%, #1a0a1a 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.9)"
+  },
+  "background": "04-fashion-v2.png"
+}

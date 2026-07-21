@@ -1,0 +1,49 @@
+{
+  "id": "cinematic-story",
+  "nameZh": "电影叙事",
+  "nameEn": "Cinematic Story",
+  "mood": "宽银幕感、暗部、克制字幕",
+  "keywords": [
+    "故事",
+    "叙事",
+    "人物",
+    "纪录",
+    "悬念",
+    "经历",
+    "回顾",
+    "深度"
+  ],
+  "colors": {
+    "primary": "#d6a15c",
+    "secondary": "#60a5fa",
+    "accent": "#f5f5f4",
+    "background": "#090909",
+    "backgroundGradient": "linear-gradient(180deg, #090909 0%, #1f1b18 100%)",
+    "text": "#fffaf0",
+    "textMuted": "rgba(255,250,240,0.78)"
+  },
+  "background": "27-cinematic-story.png",
+  "motion": {
+    "entrance": "cinematic-rise",
+    "emphasis": "accent-line",
+    "ambient": "soft-light-sweep",
+    "easing": "ease-out-quad",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

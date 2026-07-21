@@ -1,0 +1,49 @@
+{
+  "id": "data-grid",
+  "nameZh": "数据网格",
+  "nameEn": "Data Grid",
+  "mood": "深色数据面板、网格、图表、指标卡",
+  "keywords": [
+    "数据分析",
+    "趋势",
+    "指标",
+    "算法",
+    "图表",
+    "增长曲线",
+    "看板",
+    "统计"
+  ],
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#14b8a6",
+    "accent": "#8b5cf6",
+    "background": "#06111f",
+    "backgroundGradient": "linear-gradient(180deg, #06111f 0%, #0f1f36 100%)",
+    "text": "#f8fafc",
+    "textMuted": "rgba(226,232,240,0.84)"
+  },
+  "background": "11-data-grid.png",
+  "motion": {
+    "entrance": "data-rise",
+    "emphasis": "accent-line",
+    "ambient": "grid-depth-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}

@@ -1,0 +1,26 @@
+/* =============================================================
+ * Huige AI · Design Tokens
+ *
+ * 变量命名规则：
+ *   --hf-*    主题相关（会被 init-project.mjs 从 themes/*/tokens.css 覆盖）
+ *   --tvp-*   template 独有（网格线、shadow、辅助色，不随主题变化）
+ *
+ * 使用方式：
+ *   - 项目初始化后，assets/tokens.css 会被替换为对应主题
+ *   - 主题的 --hf-* 会覆盖下面的默认值
+ *   - --tvp-* 由 tokens-extra.css 提供（永远存在）
+ * ============================================================= */
+
+/* ── 默认主题：暖陶（未应用主题时的回落）── */
+:root {
+  --hf-primary:         #C15F3C;
+  --hf-secondary:       #E8A96A;
+  --hf-accent:          #8B6E48;
+  --hf-bg:              #FAF9F5;
+  --hf-bg-gradient:     none;
+  --hf-text:            #1F1E1D;
+  --hf-text-muted:      #6B6862;
+  --hf-title-color:     #1F1E1D;
+  --hf-subtitle-color:  #6B6862;
+  --hf-highlight:       #C15F3C;
+}

@@ -1,0 +1,48 @@
+/* 金融终端 Theme - CSS Tokens */
+:root {
+  --hf-primary: #d6a15c;
+  --hf-secondary: #14b8a6;
+  --hf-accent: #ef4444;
+  --hf-bg: #081521;
+  --hf-bg-gradient: linear-gradient(180deg, #081521 0%, #0f2535 100%);
+  --hf-text: #f8fafc;
+  --hf-text-muted: rgba(226,232,240,0.82);
+  --hf-title-color: #f8fafc;
+  --hf-subtitle-color: rgba(226,232,240,0.82);
+  --hf-highlight: #d6a15c;
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.28) 100%);
+  --hf-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hf-font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  --hf-size-title: 72px;
+  --hf-size-subtitle: 32px;
+  --hf-size-body: 24px;
+  --hf-size-caption: 18px;
+  --hf-weight-bold: 800;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+  --hf-radius-sm: 6px;
+  --hf-radius-md: 12px;
+  --hf-radius-lg: 18px;
+  --hf-radius-xl: 28px;
+  --hf-shadow-glow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  --hf-shadow-text: 0 4px 18px rgba(0, 0, 0, 0.36);
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.2s;
+  --hf-duration-normal: 0.4s;
+  --hf-duration-slow: 0.8s;
+  --hf-text-glow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.hf-scene { font-family: var(--hf-font-body); color: var(--hf-text); }
+.hf-title { font-size: var(--hf-size-title); font-weight: var(--hf-weight-bold); color: var(--hf-title-color); text-shadow: var(--hf-text-glow); }
+.hf-subtitle { font-size: var(--hf-size-subtitle); font-weight: var(--hf-weight-medium); color: var(--hf-subtitle-color); }
+.hf-body { font-size: var(--hf-size-body); color: var(--hf-text-muted); }
+.hf-theme-accent { color: var(--hf-primary); }
+.hf-theme-panel { background: color-mix(in srgb, var(--hf-bg) 72%, transparent); border: 1px solid color-mix(in srgb, var(--hf-primary) 32%, transparent); box-shadow: var(--hf-shadow-glow); }

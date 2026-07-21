@@ -1,0 +1,32 @@
+/* =============================================================
+ * v3 Portrait Player Shell
+ * ============================================================= */
+
+/* ── Base Reset ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;font-family:var(--hf-font-body,system-ui,sans-serif)}
+body{-webkit-font-smoothing:antialiased}
+
+/* ── Viewport (响应式，保持 16:9) ── */
+.viewport{width:min(1600px,96vw);aspect-ratio:16/9;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.5);background:var(--hf-bg,#000)}
+
+/* ── 左右布局容器 ── */
+.portrait-layout{position:absolute;inset:0;display:flex;background:var(--hf-bg,#000)}
+
+/* ── 左侧内容区 (60%) ── */
+.p-content{flex:0 0 60%;position:relative;z-index:2;overflow:hidden}
+#mount{position:absolute;inset:0}
+
+/* ── 右侧人像区 (40%) ── */
+.p-portrait{flex:0 0 40%;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.p-portrait-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,color-mix(in srgb,var(--hf-primary)5%,transparent),transparent 70%);pointer-events:none}
+
+/* ── 人像元素（替换这个 src 即可切真人视频） ── */
+#portrait-el{position:relative;width:90%;height:90%;object-fit:cover;border-radius:20px;opacity:0;transform:translateX(30px);transition:opacity .6s,transform .6s}
+#portrait-el.loaded{opacity:1;transform:translateX(0)}
+#portrait-el.placeholder{background:color-mix(in srgb,var(--hf-primary)4%,var(--hf-bg));border:2px dashed color-mix(in srgb,var(--hf-primary)15%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;color:color-mix(in srgb,var(--hf-primary)20%,transparent)}
+#portrait-el.placeholder svg{width:80px;height:80px;margin-bottom:10px}
+#portrait-el.placeholder span{font-size:14px;font-weight:500;letter-spacing:.04em}
+
+/* ── Grid overlay ── */
+.p-grid{position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--hf-grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--hf-grid-line) 1px,transparent 1px);background-size:48px 48px}

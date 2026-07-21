@@ -1,0 +1,17 @@
+{
+  "id": "tech",
+  "nameZh": "科技 Tech",
+  "nameEn": "Tech",
+  "mood": "科技感、未来感、数字氛围",
+  "keywords": ["AI", "数字", "未来", "智能", "数据", "代码"],
+  "colors": {
+    "primary": "#00d4ff",
+    "secondary": "#a855f7",
+    "accent": "#00ff88",
+    "background": "#0a0a1a",
+    "backgroundGradient": "linear-gradient(180deg, #0a0a1a 0%, #001a2e 100%)",
+    "text": "#ffffff",
+    "textMuted": "rgba(255,255,255,0.85)"
+  },
+  "background": "01-tech-v2.png"
+}

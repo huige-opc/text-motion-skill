@@ -1,0 +1,89 @@
+/* Artistic Theme - CSS Tokens */
+:root {
+  /* Colors */
+  --hf-primary: #d97706;
+  --hf-secondary: #065f46;
+  --hf-accent: #7c2d12;
+  --hf-bg: #1a1512;
+  --hf-bg-gradient: linear-gradient(180deg, #1a1512 0%, #2a2015 100%);
+  --hf-text: #fef3c7;
+  --hf-text-muted: rgba(254, 243, 199, 0.85);
+
+  /* Text Colors */
+  --hf-title-color: #fef3c7;
+  --hf-subtitle-color: rgba(254, 243, 199, 0.9);
+  --hf-highlight: #d97706;
+
+  /* Background */
+  --hf-overlay-gradient: linear-gradient(180deg, rgba(40, 25, 15, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  /* Fonts */
+  --hf-font-display: 'Georgia', 'Times New Roman', serif;
+  --hf-font-body: 'Georgia', 'Times New Roman', serif;
+
+  /* Font Sizes */
+  --hf-size-title: 64px;
+  --hf-size-subtitle: 28px;
+  --hf-size-body: 22px;
+  --hf-size-caption: 16px;
+
+  /* Font Weights */
+  --hf-weight-bold: 700;
+  --hf-weight-medium: 500;
+  --hf-weight-regular: 400;
+
+  /* Spacing */
+  --hf-space-xs: 8px;
+  --hf-space-sm: 16px;
+  --hf-space-md: 24px;
+  --hf-space-lg: 48px;
+  --hf-space-xl: 64px;
+
+  /* Border Radius */
+  --hf-radius-sm: 2px;
+  --hf-radius-md: 4px;
+  --hf-radius-lg: 8px;
+  --hf-radius-xl: 12px;
+
+  /* Shadows */
+  --hf-shadow-ink: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --hf-shadow-text: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  /* Animation */
+  --hf-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --hf-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --hf-duration-fast: 0.3s;
+  --hf-duration-normal: 0.6s;
+  --hf-duration-slow: 1.2s;
+
+  /* Text Shadow (Ink) */
+  --hf-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Scene Base */
+.hf-scene {
+  font-family: var(--hf-font-body);
+  color: var(--hf-text);
+  font-style: italic;
+}
+
+.hf-title {
+  font-size: var(--hf-size-title);
+  font-weight: var(--hf-weight-bold);
+  color: var(--hf-title-color);
+  text-shadow: var(--hf-text-shadow);
+  font-style: normal;
+}
+
+.hf-subtitle {
+  font-size: var(--hf-size-subtitle);
+  font-weight: var(--hf-weight-medium);
+  color: var(--hf-subtitle-color);
+}
+
+.hf-body {
+  font-size: var(--hf-size-body);
+  color: var(--hf-text-muted);
+}
+
+/* Artistic character comes from serif typography, spacing, and line work. */

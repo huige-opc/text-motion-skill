@@ -1,0 +1,49 @@
+{
+  "id": "creator-studio",
+  "nameZh": "创作者工作台",
+  "nameEn": "Creator Studio",
+  "mood": "时间轴、素材卡、剪辑面板",
+  "keywords": [
+    "自媒体",
+    "剪辑",
+    "脚本",
+    "素材",
+    "视频制作",
+    "剪映",
+    "创作者",
+    "内容生产"
+  ],
+  "colors": {
+    "primary": "#22d3ee",
+    "secondary": "#8b5cf6",
+    "accent": "#fb923c",
+    "background": "#0b1020",
+    "backgroundGradient": "linear-gradient(180deg, #0b1020 0%, #15162a 100%)",
+    "text": "#f8fafc",
+    "textMuted": "rgba(226,232,240,0.82)"
+  },
+  "background": "21-creator-studio.png",
+  "motion": {
+    "entrance": "panel-rise",
+    "emphasis": "accent-line",
+    "ambient": "timeline-drift",
+    "easing": "ease-out-cubic",
+    "rhythm": "medium",
+    "sceneTransition": "hard-cut"
+  },
+  "safeArea": {
+    "subtitleBandBottomPercent": 18,
+    "minMainVisualWidthPercent": 55,
+    "minMainVisualHeightPercent": 48,
+    "maxSemanticBlocks": 3,
+    "maxSmallTags": 4
+  },
+  "forbidden": [
+    "grain",
+    "glassmorphism",
+    "bokeh",
+    "paper-texture",
+    "film-grain",
+    "scene-to-scene-transition"
+  ]
+}
