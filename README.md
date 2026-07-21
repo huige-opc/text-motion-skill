@@ -160,6 +160,14 @@ node scripts/render-mp4-pipe.mjs "<projectRoot>"
 
 ---
 
-## �📄 License
+##  License
 
-MIT
+本项目采用 **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans)**（署名 - 非商业性使用 4.0 国际）协议开源。
+
+- ✅ **允许**：自由使用、修改、分享、二次创作
+- ✅ **要求**：署名原作者（huige-opc），并注明来源
+- ❌ **禁止**：任何商业用途（含商业培训、付费课程、商业产品集成等）
+
+如需商业授权，请通过上方联系方式与作者协商。
+
+完整协议见 [LICENSE](./LICENSE)。
